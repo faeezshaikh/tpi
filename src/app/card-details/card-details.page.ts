@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NavParams } from '@ionic/angular';
+import { NavParams, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-card-details',
@@ -14,13 +14,20 @@ export class CardDetailsPage implements OnInit {
     @Input() lastName: string;
     @Input() middleInitial: string;
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute,public modalController: ModalController) { }
   
   ngOnInit() {
     console.log('Firstname: ', this.firstName);
     console.log('lastName: ', this.lastName);
     console.log('middleInitial: ', this.middleInitial);
    
+  }
+
+  dismiss() {
+ 
+    this.modalController.dismiss({
+      'dismissed': true
+    });
   }
 
 }
