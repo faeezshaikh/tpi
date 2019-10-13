@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsPage implements OnInit {
 
-  constructor() { }
+  deckId;
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.deckId = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log("Deck id:",this.deckId);
+    
   }
 
 }
