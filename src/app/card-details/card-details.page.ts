@@ -15,11 +15,12 @@ export class CardDetailsPage implements OnInit {
     @Input() middleInitial: string;
 
   constructor(private activatedRoute: ActivatedRoute) { }
-
+  
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params) => {
-      console.log('Params: ', params);
-    });
+    console.log('Firstname: ', this.firstName);
+    console.log('lastName: ', this.lastName);
+    console.log('middleInitial: ', this.middleInitial);
+   
   }
 
 }
