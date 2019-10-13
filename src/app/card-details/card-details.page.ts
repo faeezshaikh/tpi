@@ -13,6 +13,7 @@ export class CardDetailsPage implements OnInit {
     @Input() firstName: string;
     @Input() lastName: string;
     @Input() middleInitial: string;
+    @Input() cardId: string;
 
   constructor(private activatedRoute: ActivatedRoute,public modalController: ModalController) { }
   
@@ -20,6 +21,7 @@ export class CardDetailsPage implements OnInit {
     console.log('Firstname: ', this.firstName);
     console.log('lastName: ', this.lastName);
     console.log('middleInitial: ', this.middleInitial);
+    console.log('cardId: ', this.cardId);
    
   }
 

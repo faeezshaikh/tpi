@@ -12,7 +12,7 @@
   </div>
 
   <ion-list>
-    <ion-item  *ngFor="let deck of decks"  [routerLink]="['/cards/', deck.id]" routerDirection="forward">
+    <ion-item  *ngFor="let deck of decks"  [routerLink]="['/decks/', deck.id]" routerDirection="forward">
       <ion-label>{{deck.name}}</ion-label>
     </ion-item>
     

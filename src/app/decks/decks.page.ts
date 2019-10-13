@@ -15,20 +15,10 @@ export class DecksPage implements OnInit {
   }
 
   openDeck(deckId) {
-    
+
   }
 
   constructor(public modalController: ModalController) {}
-  async presentModal() {
-    const modal = await this.modalController.create({
-      component: CardDetailsPage,
-      componentProps: {
-        'firstName': 'Douglas',
-        'lastName': 'Adams',
-        'middleInitial': 'N'
-      }
-    });
-    return await modal.present();
-  }
+
 
 }
