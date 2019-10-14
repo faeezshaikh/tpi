@@ -52,14 +52,14 @@ export class CardsPage implements OnInit {
     
   }
 
-  async presentModal(cardId) {
+  async presentModal(postId) {
     const modal = await this.modalController.create({
       component: CardDetailsPage,
       componentProps: {
         'firstName': 'Douglas',
         'lastName': 'Adams',
         'middleInitial': 'N',
-        'cardId':cardId
+        'postId':postId
       }
     });
     return await modal.present();
