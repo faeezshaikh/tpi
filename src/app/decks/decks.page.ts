@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CardDetailsPage } from '../card-details/card-details.page';
+import { APIService } from '../api.service';
 
 @Component({
   selector: 'app-decks',
@@ -9,6 +10,7 @@ import { CardDetailsPage } from '../card-details/card-details.page';
 })
 export class DecksPage implements OnInit {
   decks = [{}];
+  blogs;
   ngOnInit(): void {
     this.decks.push({id:1,name:"Deck 1"},{id:3,name:"Deck 3"})
     // throw new Error("Method not implemented.");
@@ -18,7 +20,13 @@ export class DecksPage implements OnInit {
 
   }
 
-  constructor(public modalController: ModalController) {}
+  constructor(public modalController: ModalController,private apiService:APIService) {
+    this.apiService.ListBlogs().then(resp => {
+      console.log("Blogs:" ,resp.items);
+      
+      this.blogs = resp.items;
+    });
+  }
 
 
 }
