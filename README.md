@@ -37,8 +37,18 @@ Amplify relies on the global and process objects to be defined, so to prevent er
 
 ```
 
-      
-## 3. Create API service:
+## 3. Create GraphQL Schema:
+
+
+```
+amplify api add
+```
+Annotation: No
+Guided: Yes
+This will open the schema editor.
+
+
+## 4. Create API service:
 
 First, make sure you have the latest version of the Amplify CLI.
 
@@ -50,4 +60,29 @@ We'll use the Ionic CLI to create an Angular service for us.
 
 ```javascript
 $ ionic g service api
+```
+
+Next, we'll need to configure the codegen to use angular instead of typescript. The CLI will ask you some questions, choose as shown below.
+
+```javascript
+amplify codegen configure
+
+? Choose the code generation language target angular
+? Enter the file name pattern of graphql queries, mutations and subscriptions src/graphql/**/*.graphql
+? Enter the file name for the generated code src/app/api.service.ts
+```
+
+You might want to delete any previously generated code before you continue. Delete the directory src/graphql/ and the file src/API.ts.
+
+And now we can use the Amplify codegen command to generate the code for our GraphQL queries and mutations.
+
+```
+amplify codegen
+```
+
+Have a look at the generated code in /src/app/api.service.ts, we'll use this service now to implement the create/update/delete functionality in our app.
+
+
+```
+amplify push
 ```
