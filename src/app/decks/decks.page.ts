@@ -9,17 +9,10 @@ import { APIService } from '../api.service';
   styleUrls: ['./decks.page.scss'],
 })
 export class DecksPage implements OnInit {
-  decks = [{}];
   blogs;
   ngOnInit(): void {
-    this.decks.push({id:1,name:"Deck 1"},{id:3,name:"Deck 3"})
-    // throw new Error("Method not implemented.");
+ 
   }
-
-  openDeck(deckId) {
-
-  }
-
   constructor(public modalController: ModalController,private apiService:APIService) {
     this.apiService.ListBlogs().then(resp => {
       console.log("Blogs:" ,resp.items);
