@@ -1,0 +1,14 @@
+{
+    "local": {
+        "awscloudformation": {
+            "AuthRoleName": "tpi-local-20191013141141-authRole",
+            "UnauthRoleArn": "arn:aws:iam::490831136015:role/tpi-local-20191013141141-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::490831136015:role/tpi-local-20191013141141-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "tpi-local-20191013141141-deployment",
+            "UnauthRoleName": "tpi-local-20191013141141-unauthRole",
+            "StackName": "tpi-local-20191013141141",
+            "StackId": "arn:aws:cloudformation:us-east-1:490831136015:stack/tpi-local-20191013141141/4a38a890-eded-11e9-b77d-123ad236a92a"
+        }
+    }
+}
