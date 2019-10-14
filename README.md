@@ -3,11 +3,11 @@
 AWS Amplify, AppSync, Cognito, Ionic 4
 
 
-1. Initialize amlify in the project dir and choose AWS profile      
+## 1. Initialize amlify in the project dir and choose AWS profile      
   ```amplify init```
 
 
-2. Install Amplify library
+## 2. Install Amplify library
 
 Install the aws-amplify library. We'll be using its GraphQL client to handle GraphQL requests and responses:
 
@@ -38,3 +38,16 @@ Amplify relies on the global and process objects to be defined, so to prevent er
 ```
 
       
+## 3. Create API service:
+
+First, make sure you have the latest version of the Amplify CLI.
+
+```
+npm install -g @aws-amplify/cli
+```
+
+We'll use the Ionic CLI to create an Angular service for us.
+
+```
+$ ionic g service api
+```
