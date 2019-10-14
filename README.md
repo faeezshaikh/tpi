@@ -15,7 +15,7 @@ Install the aws-amplify library. We'll be using its GraphQL client to handle Gra
 
 Initialize Amplify by adding the following lines to src/main.ts:
 
-```
+```javascript
 import API from '@aws-amplify/api';  
 import PubSub from '@aws-amplify/PubSub';  
 import awsConfig from './aws-exports.js';
@@ -28,7 +28,7 @@ The file src/aws-exports.js was generated when we created the GraphQL API in the
 
 Amplify relies on the global and process objects to be defined, so to prevent errors, add the following code to src/polyfills.ts
 
-```
+```javascript
 (window as any).global = window;
 
 (window as any).process = {
@@ -42,12 +42,12 @@ Amplify relies on the global and process objects to be defined, so to prevent er
 
 First, make sure you have the latest version of the Amplify CLI.
 
-```
+```javascript
 npm install -g @aws-amplify/cli
 ```
 
 We'll use the Ionic CLI to create an Angular service for us.
 
-```
+```javascript
 $ ionic g service api
 ```
