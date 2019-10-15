@@ -109,6 +109,7 @@ export type CreateBlogMutation = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type UpdateBlogMutation = {
@@ -119,6 +120,7 @@ export type UpdateBlogMutation = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type DeleteBlogMutation = {
@@ -129,6 +131,7 @@ export type DeleteBlogMutation = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type CreatePostMutation = {
@@ -139,11 +142,13 @@ export type CreatePostMutation = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type UpdatePostMutation = {
@@ -154,11 +159,13 @@ export type UpdatePostMutation = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type DeletePostMutation = {
@@ -169,11 +176,13 @@ export type DeletePostMutation = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type CreateCommentMutation = {
@@ -184,7 +193,9 @@ export type CreateCommentMutation = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type UpdateCommentMutation = {
@@ -195,7 +206,9 @@ export type UpdateCommentMutation = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type DeleteCommentMutation = {
@@ -206,7 +219,9 @@ export type DeleteCommentMutation = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type GetBlogQuery = {
@@ -217,6 +232,7 @@ export type GetBlogQuery = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type ListBlogsQuery = {
@@ -225,6 +241,7 @@ export type ListBlogsQuery = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null> | null;
   nextToken: string | null;
 };
@@ -237,11 +254,13 @@ export type GetPostQuery = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type ListPostsQuery = {
@@ -250,6 +269,7 @@ export type ListPostsQuery = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null> | null;
   nextToken: string | null;
 };
@@ -262,7 +282,9 @@ export type GetCommentQuery = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type ListCommentsQuery = {
@@ -271,6 +293,7 @@ export type ListCommentsQuery = {
     __typename: "Comment";
     id: string;
     content: string | null;
+    owner: string | null;
   } | null> | null;
   nextToken: string | null;
 };
@@ -283,6 +306,7 @@ export type OnCreateBlogSubscription = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnUpdateBlogSubscription = {
@@ -293,6 +317,7 @@ export type OnUpdateBlogSubscription = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnDeleteBlogSubscription = {
@@ -303,6 +328,7 @@ export type OnDeleteBlogSubscription = {
     __typename: "ModelPostConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnCreatePostSubscription = {
@@ -313,11 +339,13 @@ export type OnCreatePostSubscription = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnUpdatePostSubscription = {
@@ -328,11 +356,13 @@ export type OnUpdatePostSubscription = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnDeletePostSubscription = {
@@ -343,11 +373,13 @@ export type OnDeletePostSubscription = {
     __typename: "Blog";
     id: string;
     name: string;
+    owner: string | null;
   } | null;
   comments: {
     __typename: "ModelCommentConnection";
     nextToken: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnCreateCommentSubscription = {
@@ -358,7 +390,9 @@ export type OnCreateCommentSubscription = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnUpdateCommentSubscription = {
@@ -369,7 +403,9 @@ export type OnUpdateCommentSubscription = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 export type OnDeleteCommentSubscription = {
@@ -380,7 +416,9 @@ export type OnDeleteCommentSubscription = {
     __typename: "Post";
     id: string;
     title: string;
+    owner: string | null;
   } | null;
+  owner: string | null;
 };
 
 @Injectable({
@@ -397,6 +435,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -417,6 +456,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -437,6 +477,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -457,11 +498,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -482,11 +525,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -507,11 +552,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -534,7 +581,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -557,7 +606,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -580,7 +631,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -601,6 +654,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -623,6 +677,7 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           nextToken
         }
@@ -652,11 +707,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -679,6 +736,7 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
           nextToken
         }
@@ -708,7 +766,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -731,6 +791,7 @@ export class APIService {
             __typename
             id
             content
+            owner
           }
           nextToken
         }
@@ -752,8 +813,8 @@ export class APIService {
   }
   OnCreateBlogListener: Observable<OnCreateBlogSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnCreateBlog {
-        onCreateBlog {
+      `subscription OnCreateBlog($owner: String!) {
+        onCreateBlog(owner: $owner) {
           __typename
           id
           name
@@ -761,6 +822,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -768,8 +830,8 @@ export class APIService {
 
   OnUpdateBlogListener: Observable<OnUpdateBlogSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnUpdateBlog {
-        onUpdateBlog {
+      `subscription OnUpdateBlog($owner: String!) {
+        onUpdateBlog(owner: $owner) {
           __typename
           id
           name
@@ -777,6 +839,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -784,8 +847,8 @@ export class APIService {
 
   OnDeleteBlogListener: Observable<OnDeleteBlogSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnDeleteBlog {
-        onDeleteBlog {
+      `subscription OnDeleteBlog($owner: String!) {
+        onDeleteBlog(owner: $owner) {
           __typename
           id
           name
@@ -793,6 +856,7 @@ export class APIService {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -800,8 +864,8 @@ export class APIService {
 
   OnCreatePostListener: Observable<OnCreatePostSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnCreatePost {
-        onCreatePost {
+      `subscription OnCreatePost($owner: String!) {
+        onCreatePost(owner: $owner) {
           __typename
           id
           title
@@ -809,11 +873,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -821,8 +887,8 @@ export class APIService {
 
   OnUpdatePostListener: Observable<OnUpdatePostSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnUpdatePost {
-        onUpdatePost {
+      `subscription OnUpdatePost($owner: String!) {
+        onUpdatePost(owner: $owner) {
           __typename
           id
           title
@@ -830,11 +896,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -842,8 +910,8 @@ export class APIService {
 
   OnDeletePostListener: Observable<OnDeletePostSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnDeletePost {
-        onDeletePost {
+      `subscription OnDeletePost($owner: String!) {
+        onDeletePost(owner: $owner) {
           __typename
           id
           title
@@ -851,11 +919,13 @@ export class APIService {
             __typename
             id
             name
+            owner
           }
           comments {
             __typename
             nextToken
           }
+          owner
         }
       }`
     )
@@ -865,8 +935,8 @@ export class APIService {
     OnCreateCommentSubscription
   > = API.graphql(
     graphqlOperation(
-      `subscription OnCreateComment {
-        onCreateComment {
+      `subscription OnCreateComment($owner: String!) {
+        onCreateComment(owner: $owner) {
           __typename
           id
           content
@@ -874,7 +944,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`
     )
@@ -884,8 +956,8 @@ export class APIService {
     OnUpdateCommentSubscription
   > = API.graphql(
     graphqlOperation(
-      `subscription OnUpdateComment {
-        onUpdateComment {
+      `subscription OnUpdateComment($owner: String!) {
+        onUpdateComment(owner: $owner) {
           __typename
           id
           content
@@ -893,7 +965,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`
     )
@@ -903,8 +977,8 @@ export class APIService {
     OnDeleteCommentSubscription
   > = API.graphql(
     graphqlOperation(
-      `subscription OnDeleteComment {
-        onDeleteComment {
+      `subscription OnDeleteComment($owner: String!) {
+        onDeleteComment(owner: $owner) {
           __typename
           id
           content
@@ -912,7 +986,9 @@ export class APIService {
             __typename
             id
             title
+            owner
           }
+          owner
         }
       }`
     )

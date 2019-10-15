@@ -6,6 +6,7 @@ mutation CreateBlog($input: CreateBlogInput!) {
     posts {
       nextToken
     }
+    owner
   }
 }
 mutation UpdateBlog($input: UpdateBlogInput!) {
@@ -15,6 +16,7 @@ mutation UpdateBlog($input: UpdateBlogInput!) {
     posts {
       nextToken
     }
+    owner
   }
 }
 mutation DeleteBlog($input: DeleteBlogInput!) {
@@ -24,6 +26,7 @@ mutation DeleteBlog($input: DeleteBlogInput!) {
     posts {
       nextToken
     }
+    owner
   }
 }
 mutation CreatePost($input: CreatePostInput!) {
@@ -33,10 +36,12 @@ mutation CreatePost($input: CreatePostInput!) {
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
 mutation UpdatePost($input: UpdatePostInput!) {
@@ -46,10 +51,12 @@ mutation UpdatePost($input: UpdatePostInput!) {
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
 mutation DeletePost($input: DeletePostInput!) {
@@ -59,10 +66,12 @@ mutation DeletePost($input: DeletePostInput!) {
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
 mutation CreateComment($input: CreateCommentInput!) {
@@ -72,7 +81,9 @@ mutation CreateComment($input: CreateCommentInput!) {
     post {
       id
       title
+      owner
     }
+    owner
   }
 }
 mutation UpdateComment($input: UpdateCommentInput!) {
@@ -82,7 +93,9 @@ mutation UpdateComment($input: UpdateCommentInput!) {
     post {
       id
       title
+      owner
     }
+    owner
   }
 }
 mutation DeleteComment($input: DeleteCommentInput!) {
@@ -92,6 +105,8 @@ mutation DeleteComment($input: DeleteCommentInput!) {
     post {
       id
       title
+      owner
     }
+    owner
   }
 }

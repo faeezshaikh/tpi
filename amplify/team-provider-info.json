@@ -9,6 +9,11 @@
             "UnauthRoleName": "tpi-local-20191013141141-unauthRole",
             "StackName": "tpi-local-20191013141141",
             "StackId": "arn:aws:cloudformation:us-east-1:490831136015:stack/tpi-local-20191013141141/4a38a890-eded-11e9-b77d-123ad236a92a"
+        },
+        "categories": {
+            "auth": {
+                "tpi6df0bb3c": {}
+            }
         }
     }
 }

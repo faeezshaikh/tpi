@@ -86,3 +86,45 @@ Have a look at the generated code in /src/app/api.service.ts, we'll use this ser
 ```
 amplify push
 ```
+
+## 5. Enable Auth
+
+```
+amplify update api
+```
+
+Update model in ```/tpi/amplify/backend/api/tpi/schema.graphql```
+
+Add 
+```
+ @auth(rules: [{ allow: owner }]) 
+ ```
+
+ After updating the schema do ```amplify push```. Say Yes to codegen questions.
+
+
+ Your aws-exports.js file should now have changed to include the settings needed for Amazon Cognito. You can't use the API key anymore to connect to the GraphQL API.
+
+We need to update main.ts to configure the Amplify library to use these settings and then we'll go ahead and make our UI changes.
+
+```
+import Amplify from 'aws-amplify';
+
+PubSub.configure(awsConfig);  
+API.configure(awsConfig);  
+```
+
+Instal Auth UI
+
+```
+npm install --save aws-amplify-angular @aws-amplify/ui
+```
+
+Update login module, component and html
+Add guard
+
+```
+ionic g service auth-guard
+```
+
+Follow steps om gonehybrid post

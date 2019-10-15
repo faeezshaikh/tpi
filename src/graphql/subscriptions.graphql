@@ -1,97 +1,112 @@
 # this is an auto generated file. This will be overwritten
-subscription OnCreateBlog {
-  onCreateBlog {
+subscription OnCreateBlog($owner: String!) {
+  onCreateBlog(owner: $owner) {
     id
     name
     posts {
       nextToken
     }
+    owner
   }
 }
-subscription OnUpdateBlog {
-  onUpdateBlog {
+subscription OnUpdateBlog($owner: String!) {
+  onUpdateBlog(owner: $owner) {
     id
     name
     posts {
       nextToken
     }
+    owner
   }
 }
-subscription OnDeleteBlog {
-  onDeleteBlog {
+subscription OnDeleteBlog($owner: String!) {
+  onDeleteBlog(owner: $owner) {
     id
     name
     posts {
       nextToken
     }
+    owner
   }
 }
-subscription OnCreatePost {
-  onCreatePost {
+subscription OnCreatePost($owner: String!) {
+  onCreatePost(owner: $owner) {
     id
     title
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
-subscription OnUpdatePost {
-  onUpdatePost {
+subscription OnUpdatePost($owner: String!) {
+  onUpdatePost(owner: $owner) {
     id
     title
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
-subscription OnDeletePost {
-  onDeletePost {
+subscription OnDeletePost($owner: String!) {
+  onDeletePost(owner: $owner) {
     id
     title
     blog {
       id
       name
+      owner
     }
     comments {
       nextToken
     }
+    owner
   }
 }
-subscription OnCreateComment {
-  onCreateComment {
+subscription OnCreateComment($owner: String!) {
+  onCreateComment(owner: $owner) {
     id
     content
     post {
       id
       title
+      owner
     }
+    owner
   }
 }
-subscription OnUpdateComment {
-  onUpdateComment {
+subscription OnUpdateComment($owner: String!) {
+  onUpdateComment(owner: $owner) {
     id
     content
     post {
       id
       title
+      owner
     }
+    owner
   }
 }
-subscription OnDeleteComment {
-  onDeleteComment {
+subscription OnDeleteComment($owner: String!) {
+  onDeleteComment(owner: $owner) {
     id
     content
     post {
       id
       title
+      owner
     }
+    owner
   }
 }
